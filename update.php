@@ -12,7 +12,7 @@ include "database.php";
 
     $email = $_POST['email'];
 
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
 
     $sql = "UPDATE  `users` SET `first_name`='$first_name',`last_name`='$last_name',`email`='$email', `password`='$password' WHERE `user_id`='$user_id'";
 
